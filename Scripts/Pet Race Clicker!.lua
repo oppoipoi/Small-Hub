@@ -1,5 +1,3 @@
-
-
 local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wall%20v3')))()
 
 local w = library:CreateWindow("Not a cheat") -- Creates the window
@@ -52,7 +50,7 @@ game:GetService("RunService").RenderStepped:Connect(function()
 local plr = game:GetService("Players").LocalPlayer
 local character = plr.Character or plr.CharacterAdded:Wait()
 local hum = character:FindFirstChild("Humanoid")    
-    if game.Workspace.HerasiumMC.HumanoidRootPart.Position.Z >= -70 then
+    if game.Workspace[game.Players.LocalPlayer.Name].HumanoidRootPart.Position.Z >= -70 then
         if rebirth == true then
            game:GetService("ReplicatedStorage").Events.Rebirth:FireServer()
         end    
@@ -73,7 +71,7 @@ end)
 
 while wait() do
     local esf = pcall(function()
-    if game.Workspace.HerasiumMC.HumanoidRootPart.Position.Z >= -70 then
+    if game.Workspace[game.Players.LocalPlayer.Name].HumanoidRootPart.Position.Z >= -70 then
         for i,v in pairs(character:GetChildren()) do
             local a = pcall(function()
             print("tp")
@@ -89,22 +87,3 @@ end
 
 
 
-
---[[
-How to refresh a dropdown:
-1)Create the dropdown and save it in a variable
-local yourvariable = b:Dropdown("Hi",yourtable,function(a)
-    print(a)
-end)
-2)Refresh it using the function
-yourvariable:Refresh(yourtable)
-How to refresh a label:
-1)Create your label and save it in a variable
-local yourvariable = b:Label("Pretty Useless NGL",{
-    TextSize = 25; -- Self Explaining
-    TextColor = Color3.fromRGB(255,255,255);
-    BgColor = Color3.fromRGB(69,69,69);
-})
-2)Refresh it using the function
-yourvariable:Refresh("Hello") It will only change the text ofc
-]]
