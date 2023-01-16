@@ -21,10 +21,23 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
-local scriptlist = {"Pet Family 2","Pet Race Clicker!"}
+local scriptlist = {["Pet Family 2"] = "https://raw.githubusercontent.com/oppoipoi/Small-Hub/main/Scripts/Pet%20Family%202.lua ",["Pet Race Clicker!"] = "https://raw.githubusercontent.com/oppoipoi/Small-Hub/main/Scripts/Pet%20Race%20Clicker!.lua"}
 local Tab = Window:CreateTab("Script", 4483362458)
 for i,v in pairs(scriptlist) do
-   local Section = Tab:CreateSection(v)
-end
+   local Section = Tab:CreateSection(i)
+local Button = Tab:CreateButton({
+   Name = " Run",
+   Callback = function()
+    local run = loadstring(game:HttpGet(v))()
 
+   end,
+})
+end
+   local Section = Tab:CreateSection("Exit")
+local Button = Tab:CreateButton({
+   Name = "Exit",
+   Callback = function()
+        Rayfield:Destroy()
+   end,
+})
 
