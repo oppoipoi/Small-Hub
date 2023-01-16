@@ -21,5 +21,5 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
-local List = loadstring(game:HttpGet('https://raw.githubusercontent.com/oppoipoi/Small-Hub/main/ScriptList.lua'))()
-List:list()
+local list = loadstring(game:HttpGet('https://raw.githubusercontent.com/oppoipoi/Small-Hub/main/ScriptList.lua'))()
+
