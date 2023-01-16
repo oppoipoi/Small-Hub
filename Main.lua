@@ -22,7 +22,7 @@ local Window = Rayfield:CreateWindow({
 })
 
 local scriptlist = {"Pet Family 2","Pet Race Clicker!"}
-local Tab = Window:CreateTab("Scripts", 4483362458)
+local Tab = Window:CreateTab("Script", 4483362458)
 for i,v in pairs(scriptlist) do
    local Section = Tab:CreateSection(v)
 end
