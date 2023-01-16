@@ -21,5 +21,9 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
-local list = loadstring(game:HttpGet('https://raw.githubusercontent.com/oppoipoi/Small-Hub/main/ScriptList.lua'))()
+local scriptlist = {"Pet Family 2","Pet Race Clicker!"}
+for i,v in pairs(scriptlist) do
+   local Tab = Window:CreateTab(i, 4483362458)
+end
+
 
